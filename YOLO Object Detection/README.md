@@ -26,7 +26,7 @@ When it comes to deep learning-based object detection, there are three primary o
 2. Single Shot Detector (SSDs)
 3. You Only Look Once (YOLO)
 
-**R-CNNs** 
+#### **R-CNNs** 
 
 Two-stage detector:
 1. In the first R-CNN publication, Rich feature hierarchies for accurate object detection and semantic segmentation, (2013) Girshick et al. proposed an object detector that required an algorithm such as **Selective Search** (or equivalent) to propose candidate bounding boxes that could contain objects. These regions were then passed into a CNN for classification, ultimately leading to one of the first deep learning-based object detectors.
@@ -34,7 +34,8 @@ Two-stage detector:
 
 "The problem with the standard R-CNN method was that it was painfully **slow** and not a complete end-to-end object detector".
 
-**Fast R-CNN**
+#### **Fast R-CNN**
+
 The Fast R-CNN algorithm made considerable improvements to the original R-CNN, namely increasing accuracy and reducing the time it took to perform a forward pass; however, the model still relied on an external region proposal algorithm.
 
 While R-CNNs tend to very accurate, the biggest problem with the R-CNN family of networks is their speed — they were incredibly slow, obtaining only 5 FPS on a GPU.
@@ -74,4 +75,9 @@ Therefore, if you know your dataset consists of many small objects grouped close
 3. If I need a middle ground, I tend to go with SSDs.
 
 **NOTE**: In most of my situations I end up using SSDs or RetinaNet — both are a great balance between the YOLO/Faster R-CNN.
+
+### Sample output
+
+![](https://github.com/shejz/Object-Detection/blob/main/YOLO%20Object%20Detection/output/car_crash.gif)
+![](https://github.com/shejz/Object-Detection/blob/main/YOLO%20Object%20Detection/output/airport.gif)
 
