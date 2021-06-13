@@ -68,7 +68,7 @@ Therefore, if you know your dataset consists of many small objects grouped close
 2. YOLO may have excellent results on the COCO dataset; however, I have not found that same level of accuracy for my own tasks.
 
 
-### I, therefore, tend to use the following guidelines when picking an object detector for a given problem:
+#### Use the following guidelines when picking an object detector for a given problem:
 1. If I know I need to detect small objects and speed is not a concern, I tend to use Faster R-CNN.
 2. If speed is absolutely paramount, I use YOLO.
 3. If I need a middle ground, I tend to go with SSDs.
