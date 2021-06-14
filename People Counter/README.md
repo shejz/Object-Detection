@@ -87,3 +87,29 @@ Registering simply means that we are adding the new object to our list of tracke
 2. Storing the centroid of the bounding box coordinates for the new object.
 
 **STEP 5**: In the event that an object has been lost or has left the field of view, we can simply **deregister the object**. Exactly how you handle when an object is “lost” or is “no longer visible”. But for our **people counter**, we will deregister people IDs when they cannot be matched to any existing person objects for 40 consecutive frames. 
+
+### Creating a “trackable object”
+In order to track and count an object in a video stream, we need an easy way to store information regarding the object itself, including:
+
+1. It’s object ID
+2. It’s previous centroids (so we can easily to compute the direction the object is moving)
+3. Whether or not the object has already been counted
+
+### Implementing People Counter with OpenCV 
+Now let’s detect people using the **SSD**
+
+- **Waiting**: In this state, we’re waiting on people to be detected and tracked.
+- **Detecting**: We’re actively in the process of detecting people using the MobileNet SSD.
+- **Tracking:** People are being tracked in the frame and we’re counting the totalUp and totalDown .
+
+### People Counting Results
+
+![]()
+
+Here you can see that our person counter is counting the number of people who:
+
+- Are entering the department store (down)
+- And the number of people who are leaving (up)
+
+**You can see how useful this system would be to a store owner interested in foot traffic analytics.**
+
