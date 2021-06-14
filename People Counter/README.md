@@ -56,7 +56,7 @@ Along with dlib’s object tracking implementation, we’ll also be using the ce
 
 **STEP 1**:  Is to accept **bounding box coordinates** and use them to **compute centroids**:
 
-![]()
+![](https://github.com/shejz/Object-Detection/blob/main/People%20Counter/images/Centroid%20Tracking.jpg)
 
 The bounding boxes themselves can be provided by either:
 1. An object detector (such as HOG + Linear SVM, Faster R- CNN, SSDs, etc.)
@@ -64,7 +64,7 @@ The bounding boxes themselves can be provided by either:
 
 **STEP 2**: Compute the Euclidean distance between any new centroids (yellow) and existing centroids (purple):
 
-![]()
+![](https://github.com/shejz/Object-Detection/blob/main/People%20Counter/images/Euclidean%20Distance.jpg)
 
 Compute the Euclidean distance between each pair of original centroids (red) and new centroids (green). The centroid tracking algorithm makes the assumption that pairs of centroids with minimum Euclidean distance between them must be the same object ID.
 
@@ -72,7 +72,7 @@ In the example image above we have two existing centroids (purple) and three new
 
 **STEP 3**:  Associate object IDs
 
-![]()
+![](https://github.com/shejz/Object-Detection/blob/main/People%20Counter/images/object%20ID.jpg)
 
 You can see that our centroid tracker has chosen to associate centroids that minimize their respective Euclidean distances. But what about the point in the bottom-left?
 
@@ -81,12 +81,15 @@ It didn’t get associated with anything. What do we do about the object in the 
 
 **STEP 4**: Perform registering new objects:
 
+![](https://github.com/shejz/Object-Detection/blob/main/People%20Counter/images/Registering%20New%20Objects.jpg)
+
 Registering simply means that we are adding the new object to our list of tracked objects by:
 
 1. Assigning it a new object ID.
 2. Storing the centroid of the bounding box coordinates for the new object.
 
 **STEP 5**: In the event that an object has been lost or has left the field of view, we can simply **deregister the object**. Exactly how you handle when an object is “lost” or is “no longer visible”. But for our **people counter**, we will deregister people IDs when they cannot be matched to any existing person objects for 40 consecutive frames. 
+
 
 ### Creating a “trackable object”
 In order to track and count an object in a video stream, we need an easy way to store information regarding the object itself, including:
@@ -104,7 +107,7 @@ Now let’s detect people using the **SSD**
 
 ### People Counting Results
 
-![]()
+![](https://github.com/shejz/Object-Detection/blob/main/People%20Counter/output/people_counter.gif)
 
 Here you can see that our person counter is counting the number of people who:
 
