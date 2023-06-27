@@ -1,6 +1,6 @@
 ## YOLO Object detection with OpenCV
 
-DEMO:  [![Nbviewer](https://github.com/jupyter/design/blob/master/logos/Badges/nbviewer_badge.svg)](https://nbviewer.jupyter.org/github/shejz/Object-Detection/blob/main/YOLO%20Object%20Detection/yolo_object_detection.ipynb)
+DEMO:  [![Nbviewer](https://github.com/jupyter/design/blob/main/logos/Badges/nbviewer_badge.svg)](https://nbviewer.jupyter.org/github/shejz/Object-Detection/blob/main/YOLO%20Object%20Detection/yolo_object_detection.ipynb)
 
 - Apply the YOLO object detector to images
 - Apply YOLO to video streams
